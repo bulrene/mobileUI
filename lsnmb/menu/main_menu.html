@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="ko">
-     <head>
+    <head>
         <meta charset="utf-8"/>
         <title>MobileUI</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <!-- MobileUI Common import -->        
 		<link rel="stylesheet" href="/css/egovframework/mbl/cmm/jquery.mobile-1.4.5.css" />
 		<link rel="stylesheet" href="/css/egovframework/mbl/cmm/EgovMobile-1.4.5.css" />
-		<script type="text/javascript" src="/js/egovframework/mbl/cmm/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="/js/egovframework/mbl/cmm/jquery-1.11.2.js"></script>
 		
-		<script type="text/javascript" src="/js/egovframework/mbl/cmm/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="/js/egovframework/mbl/cmm/jquery.mobile-1.4.5.js"></script>
 		<script type="text/javascript" src="/js/egovframework/mbl/cmm/EgovMobile-1.4.5.js"></script>
    
         <!-- guide import -->
 		<link rel="stylesheet" href="/css/egovframework/mbl/rte/guide/guide.css">
 		<script type="text/javascript"  src="/js/egovframework/mbl/rte/guide/guide.js"></script>
+         
+        <!-- datebox javascript-->
+		<link rel="stylesheet" href="/css/egovframework/mbl/com/datepicker/jqm-datebox.css"/>
+
+		<script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jqm-datebox.core.js"></script>
+        <script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jqm-datebox.mode.calbox.js"></script> 
+		<script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jqm-datebox.mode.datebox.js"></script>
+		<script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jqm-datebox.mode.flipbox.js"></script>
+		<script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jquery.mobile.datebox.i18n.ko.utf8.js"></script> 
     </head>
     <body>
     <div data-role="page" class="type-home" data-title="PS영업정보">
 	<div data-role="header" data-position="fixed" data-theme="d" class="egovBarHeader">
-         <a href="/lsnmb/index.html" data-icon="home" class="ui-btn-left" data-theme="d" data-ajax="false">Home</a>
-         <a href="/lsnmb/index.html" data-icon="back" class="ui-btn-right"data-theme="d" data-ajax="false">Back</a>    
+         <a href="/lsnmb/index.html" data-icon="delete" class="ui-btn-left"data-theme="d" data-ajax="false">Logout</a>    
 	   <h1><img src="/images/lsnetworks/logo1.png" alt="lsnetworks" /></h1>
 	</div>
     <div data-role="content" data-theme="b">
@@ -31,7 +39,7 @@
                         <h3>영업실적</h3> 
                         <ul data-role="listview" data-inset="true" data-theme="e"> 
                             <li><a href="#">판매종합현황</a></li> 
-                            <li><a href="#">상품별판매현황</a></li> 
+                            <li><a href="/lsnmb/menu/sap001_menu.html">상품별판매현황</a></li> 
                             <li><a href="#">상품별판매현황(특영제외)</a></li> 
                             <li><a href="#">조직별판매현황</a></li> 
                             <li><a href="#">유통별판매현황</a></li> 
