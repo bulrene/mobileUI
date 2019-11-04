@@ -1,0 +1,508 @@
+/* = Common Reset
+---------------------------------------------------------------------------- */
+
+/*
+flipbox가 제대로 표현되지 않는 문제가 있었는데, guide.css의 body 초기화 부분이 문제이고, 
+다른 부분에서 이중 초기화가 발생한 것으로 추정되어 guide.css에서는 삭제 
+(2012-08-01)	
+
+body, ul, dl, li, ol, dt, dd, p { margin: 0; padding: 0; }
+*/
+
+ul, dl, ol { list-style: none; }
+em { font-style:normal }
+img { border:0; }
+table { empty-cells: show; border-collapse: collapse; border-spacing: 0;}
+
+/* jqm docs css
+
+Beware: lots of last-minute CSS going on in here 
+cobblers, shoes, 
+*/
+
+body { background: #ffffff; }   /*회색은 #dddddd */
+
+.ui-mobile #jqm-home {  background: #fff; }
+.ui-mobile #jqm-homeheader { padding: 2.500em 0.625em 0; text-align: center;  margin: 0 auto; }
+.ui-mobile #jqm-homeheader h1 { margin: 0 0 ; }
+.ui-mobile #jqm-homeheader h1 img { vertical-align:top}
+.ui-mobile #jqm-homeheader p { margin: .3em 0 0; line-height: 1.3; font-size: .9em; font-weight: bold; color: #666; }
+.ui-mobile #jqm-version { text-indent: -99999px; background: url(../../../../../images/version.png) top right no-repeat; width: 119px; height: 122px; overflow: hidden; position: absolute; z-index: 50; top: 0; right: 0; }
+.ui-mobile .jqm-themeswitcher { margin: 0.625em 25px 0.625em 0.625em;  }
+
+h2 { margin-top:1.5em; }
+p code { font-size:1.2em; font-weight:bold; } 
+
+dt { font-weight: bold; margin: 2em 0 .5em; }
+dt code, dd code { font-size:1.3em; line-height:150%; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+#jqm-homeheader img { width: 235px; }
+
+.ui-header .jqm-home { top:0.65em; }
+nav { margin: 0; }
+
+.footer-docs {  padding: 0.313em 0; }
+.footer-docs p {
+    float: left;
+    margin-left:15px;
+    font-weight: normal;
+    font-size: .9em;
+}
+
+.type-home .ui-content {    margin-top: 0.313em;  }
+.content-secondary .ui-collapsible-contain {
+    padding: 0.625em 15px;
+
+}
+.content-secondary .ui-collapsible-heading {    margin: 0 0 30px; }
+.content-secondary .ui-collapsible-heading-collapsed,
+.content-secondary .ui-collapsible-content {
+    padding:0;
+    margin: 0;
+}
+
+/* docs site layout */
+
+@media all and (min-width: 650px){
+    
+    .jqm-home {
+        position: absolute;
+        left: 10px;
+        top: 0;
+    }
+    .type-home .ui-content {
+        margin-top: 0.313em;
+    }
+    .ui-mobile #jqm-homeheader {
+        max-width: 340px;
+    }
+    .ui-mobile .jqm-themeswitcher {
+        float: right;
+    }
+    .type-home .content-secondary {
+    	text-align: center;
+        float: left;
+        width: 38%;
+        margin: 27px 0 20px 3%;
+        padding: 0px 4% 0 0;
+        background: none;
+    }
+    .content-secondary {
+    	text-align: left;
+        float: left;
+        width: 30%;
+        margin: 30px 0 20px 2%;
+        padding: 0px 4% 0 0;
+        background: none;
+    }
+    
+    .type-index .content-secondary { padding: 0; }
+    .type-index .content-secondary .ui-listview {   margin: 0;  }
+
+    .ui-mobile #jqm-homeheader {    padding: 0; }
+    .content-primary {
+        width: 52%;
+        float: right;
+        margin-top: 25px;
+        margin-right: 3%;
+        padding-right: 1%;
+    }
+    .content-primary ul:first-child {
+        margin-top: 0;
+    }
+    .content-secondary h2 {
+        position: absolute;
+        left: -9999px;
+    }
+    .type-home .content-primary {
+        width: 48%;
+        float: right;
+        margin-top: 25px;
+        margin-right: 3%;
+        padding-right: 1%;
+    }
+
+    /* fix up the collapsibles - expanded on desktop */
+    .content-secondary .ui-collapsible-heading {
+        display: none;
+    }
+    .content-secondary .ui-collapsible-contain {
+        margin:0;
+    }
+    .content-secondary .ui-collapsible-content {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    
+}
+@media all and (min-width: 750px){
+    .content-secondary {
+        width: 30%;
+    }
+    .content-primary {
+        width: 60%;
+    }   
+
+}
+
+@media all and (min-width: 1200px){
+    .type-home .ui-content{
+        background-position: 38.5%;
+    }
+    .content-secondary {
+        width: 30%;
+        padding: 0;
+        background: none;
+    }
+    .content-primary {
+        width: 60%;
+    }
+
+}
+
+
+
+/* = Guide.jsp 2011.07.07 구지연
+---------------------------------------------------------------------------- */
+/* = guide bar */
+.egov-bar-main1 { 
+	/*margin-bottom:0.125em;*/
+	border: solid 1px #ce000e;
+	color:#fff;
+	text-shadow:none;
+    background-image: linear-gradient(#ed646c, #d40b09);
+    background-image: -o-linear-gradient(top, #ed646c, #d40b09);
+    background-image: -moz-linear-gradient(top, #ed646c, #d40b09);
+    background-image: -webkit-linear-gradient(top, #ed646c, #d40b09);
+    background-image: -webkit-gradient(linear,left top,left bottom, color-stop(0, #ed646c),color-stop(1, #d40b09));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ed646c', EndColorStr='#d40b09)')"; }
+.egov-bar-main1 a {color:#fff;}
+
+.egov-bar-main2 { 
+    color: #1b374c; 
+    text-shadow: 0 0px 0px #fff;
+    background-image: linear-gradient(#aecbec, #aebbdc);
+    background-image: -o-linear-gradient(top, #aecbec, #aebbdc);
+    background-image: -moz-linear-gradient(top, #aecbec, #aebbdc);
+    background-image: -webkit-linear-gradient(top, #aecbec, #aebbdc);
+    background-image: -webkit-gradient(linear,left top,left bottom, color-stop(0, #aecbec), color-stop(1, #aebbdc));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#aecbec', EndColorStr='#aebbdc)')"; }
+
+.egov-bar-main3 {
+	text-shadow: 0 0px 0px #fff;
+    background-image: linear-gradient(#8dcfcc, #69aec5);
+    background-image: -o-linear-gradient(#8dcfcc, #69aec5);
+    background-image: -moz-linear-gradient(top, #8dcfcc, #69aec5);
+    background-image: -webkit-gradient(linear,left top,left bottom, color-stop(0, #8dcfcc), color-stop(1, #69aec5));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#8dcfcc', EndColorStr='#69aec5')"; }
+
+.egov-bar-main4 {
+	color:#341a4c; 
+	text-shadow: 0 0px 0px #fff;
+    background-image: linear-gradient(#d5aeec, #78459a);
+    background-image: -o-linear-gradient(#d5aeec, #d3aedc);
+    background-image: -moz-linear-gradient(top, #d5aeec, #d3aedc);
+    background-image: -webkit-gradient(linear,left top,left bottom, color-stop(0, #d5aeec), color-stop(1, #d3aedc));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#d5aeec', EndColorStr='#d3aedc')"; }
+    
+/* bar 높이를 다르게 지정하고 싶을  경우 */
+.egovBar { height: 2.563em; text-shadow:none; }
+.egovBarHeader { height:2.813em;}
+
+/* = guide.jsp */
+.egov-intro {list-style: none ; border-top: 1px solid #d1d1d1;  margin:0.813em 0 0 }
+.egov-intro li { border-bottom: 0;   color:#9a9a9a ; text-align:left; padding:0.813em 0 0; font-size:0.875em ; line-height:150%; }
+.egov-intro li strong { color:#ec4d07; }
+
+.egov-info { margin:0 auto; text-align:center; }
+.egov-info img { text-align:center;}
+
+
+/* = Sub page list
+---------------------------------------------------------------------------- */
+
+/* list */
+.egov-tit { padding:0; margin:0 }
+.egov-tit h1 { background: url(../../../../../images/egovframework/mbl/rte/guide/ic_bar.png) 0 0.250em no-repeat; font-size:1.375em; font-weight:bold; padding:0 0 0 0.875em}
+.egov-tit span.sub { font-size:0.8em; font-weight:normal; color:#016db8; }
+.egov-tit p { font-size:0.875em; color:#676767; line-height:150%; font-family: Dotum; text-align:justify; padding-top:0.625em;}
+.egov-tit p strong { color:#016db8; }
+
+.egov-deth1, dl.egov-deth1 { padding:0 0 0.313em; margin:0;}
+.egov-deth1 h2, dl.egov-deth1 dt { background:#f3f3f3; border-top: solid 1px #d7d6cc; border-bottom: solid 1px #d7d6cc; padding:.438em 0 .438em .75em; font-size:0.750em; font-weight:bold; overflow:hidden}
+.egov-deth1 p, dl.egov-deth1 dd { color:#6f6f6f; font-size:0.750em; padding:0.313em 0.875em 0; line-height:140%; font-family: Dotum; text-align:justify; }
+
+.egov-deth1 {  padding:0 0 0.313em; margin:0}
+.egov-deth1 li.egovTit { background:#f3f3f3; border-top: solid 1px #d7d6cc; border-bottom: solid 1px #d7d6cc; padding:.438em 0 .438em .75em; font-size:0.750em; font-weight:bold; overflow:hidden}
+.egov-deth1 li.egov {color:#6f6f6f; font-size:0.750em; padding:0.313em 0.875em 0; line-height:140%; font-family: Dotum; text-align:justify;}
+
+.egov-deth2 { margin:0.5em 0.875em; padding:0.5em; border: dashed 1px #bfd3dc; background:#f7f9fa;}
+.egov-deth2 h2 { background:none; border-top:0; border-bottom:0; padding:0; font-size: 1.5em; }
+.egov-deth2 .link { margin:0; padding:0.313em 0 0; width:100%; list-style:none; }
+.egov-deth2 .link li { color:#000; text-align:left; font-size:0.75em; font-family: Arial, sans-serif; line-height:150%; }
+.egov-deth2 .link li span.under { text-decoration:underline; }
+
+dl.egov-deth3 { margin:0; padding:0 0.750em; }
+dl.egov-deth3 dt { background:#fff; border-top: solid 1px #abc2d9; border-bottom: solid 1px #abc2d9; padding:.438em 0 .438em .75em; font-size:0.750em; font-family: Dotum; font-weight:bold; overflow:hidden}
+dl.egov-deth3 dd { color:#6f6f6f; text-align:left; font-size:0.750em; font-family: Dotum; line-height:130%; padding:0.313em 0.750em 0.5em; }
+dl.egov-deth3 dd.egovBul { background: url(../../../../../images/egovframework/mbl/rte/guide/ic_dot.png) 0 8px no-repeat; font-size:0.750em; font-weight:bold; padding:0.5em 0 0.5em 1.125em; border:none; margin:0 0.8em;}
+dl.egov-deth3 dd.egovArr { background: url(../../../../../images/egovframework/mbl/rte/guide/ic_arr.png) 0 5px no-repeat; padding:0.313em 0 0 0.938em; margin:0 0.8em;}
+dl.egov-deth3 dd.egovArr2 { background: url(../../../../../images/egovframework/mbl/rte/guide/ic_arr.png) 0 5px no-repeat; padding:0.313em 0 0 0.938em; margin:0 1.125em;}
+dl.egov-deth3 dd span { font-size:0.875em; line-height:130%; color:#0774ba;}
+dl.egov-deth3 dd strong { color:#333; }
+
+.egov-deth4 { margin:0 0 0 1.250em; padding:0 0.750em; }
+.egov-deth4 li { list-style-type: circle; display: list-item;  padding: 1px;}
+
+.egov-deth5 { margin:0; padding:0 1.250em; }
+.egov-deth5 dt { font-size:0.750em; }
+.egov-deth5 dd { color:#6f6f6f; text-align:left; padding:0.313em 0.750em; font-size:0.750em; line-height:130%; }
+
+ul.egov-txt { margin:0; padding:0.750em 0;}
+ul.egov-txt li  { color:#6f6f6f; text-align:left; font-size:0.750em; font-family: Dotum; line-height:130%;	background: url(../../../../../images/egovframework/mbl/rte/guide/ic_arr.png) 0 5px no-repeat;  padding:0.313em 0 0 0.500em; margin:0 0.313em;}
+ul.egov-txt li.noBack {background:none;}
+
+.egov-noBack { margin:0; padding:0.313em 0;}
+.egov-noBack li  { color:#6f6f6f; text-align:left; font-size:0.750em; font-family: Dotum; line-height:130%; padding:0.5em 0 0 ;}
+
+
+/* 왼쪽들여쓰기  */
+.egov-txtIn1 { text-indent: 1em; }
+.egov-txtIn2 { text-indent: 2em; }
+.egov-txtIn3 { text-indent: 3em; }
+.egov-txtIn4 { text-indent: 4em; }
+.egov-txtIn5 { text-indent: 5em; }
+.egov-txtIn6 { text-indent: 6em; }
+.egov-txtIn7 { text-indent: 7em; }
+.egov-txtIn8 { text-indent: 8em; }
+.egov-txtIn9 { text-indent: 9em; }
+.egov-txtIn10 { text-indent: 10em; }
+
+/* = Sub page table List
+---------------------------------------------------------------------------- */
+
+/* 지원사양  */
+.egov-table-spceial { width:100%; border:solid 1px #abc2d9;}
+.egov-table-spceial th { border-bottom:solid 1px #abc2d9;border-right:solid 1px #abc2d9;background:#f7f7f7;padding:0.313em 0;text-align:center; font-size:14px; color:#6085c9;}
+.egov-table-spceial td { border-bottom:solid 1px #abc2d9;border-right:solid 1px #abc2d9;padding:0.313em;text-align:left; font-size:0.750em; color:#666666; }
+.egov-table-spceial td.type1 { text-align:center; }
+
+/* 지원플랫폼  */
+.egov-table-platform { width:100%; border:solid 1px #abc2d9;}
+.egov-table-platform th { border-bottom:solid 1px #abc2d9;border-right:solid 1px #abc2d9;background:#f7f7f7;padding:0.313em 0 0;text-align:center; font-size:14px; color:#6085c9;}
+.egov-table-platform td { border-bottom:solid 1px #abc2d9;border-right:solid 1px #abc2d9;padding:0.313em;text-align:center;font-size:0.750em; color:#666666; }
+.egov-table-platform tr.type2 td { background:#c9d7f2; padding:5px 0; font-weight:bold; font-size:12px; }
+
+/* 파일 명명규칙 */
+.egov-table-file { width:98%; border:solid 1px #abc2d9; margin:0.625em auto}
+.egov-table-file th { border-bottom:solid 1px #abc2d9;border-right:solid 1px #abc2d9;background:#f7f7f7;padding:0.313em 0;text-align:center; font-size:12px; color:#6085c9;}
+.egov-table-file td { border-bottom:solid 1px #abc2d9;border-right:solid 1px #abc2d9;padding:0.313em;text-align:left;font-size:0.750em; color:#666666; }
+.egov-table-file td.tyCen { text-align:center;}
+
+/* 화면표준코드정의 */
+.egov-table-code { width:100%; border:solid 1px #abc2d9; margin:0.313em auto}
+.egov-table-code th { border-bottom:solid 1px #abc2d9;border-right:solid 1px #abc2d9;background:#f7f7f7;padding:0.313em 0;text-align:center; font-size:12px; color:#6085c9;}
+.egov-table-code td { border-bottom:solid 1px #abc2d9;border-right:solid 1px #abc2d9;padding:0.313em;text-align:center;font-size:0.750em; color:#666666; }
+
+/* custom icon */
+.ui-icon-chat:after {
+	background: url(../../../../../images/egovframework/mbl/rte/guide/components/icon/chat.png) 50% 50% no-repeat; 
+	background-size: 24px 22px; 
+	width: 24px!important; 
+	height: 22px!important;
+}
+.ui-icon-magnify:after {
+	background: url(../../../../../images/egovframework/mbl/rte/guide/components/icon/magnify.png) 50% 50% no-repeat; 
+	background-size: 24px 24px; 
+	width: 24px!important; 
+	height: 22px!important;
+}
+.ui-icon-piggy:after {
+	background: url(../../../../../images/egovframework/mbl/rte/guide/components/icon/piggy.png) 50% 50% no-repeat; 
+	background-size: 27px 20px; 
+	width: 24px!important; 
+	height: 22px!important;
+}
+.ui-icon-egov:after {
+	background: url(../../../../../images/egovframework/mbl/rte/guide/components/icon/egov.png) 50% 50% no-repeat; 
+	background-size: 16px 28px; 
+	width: 24px!important; 
+	height: 22px!important;
+}
+
+/* 그리드 구분*/
+.gen-grid { overflow: hidden; }
+.gen-grid .gen-wid1 { width: 30%;}
+.gen-grid .gen-wid2 { width: 70%;}
+.gen-wid1, .gen-wid2 {  margin: 0; padding: 0; border: 0; float: left;}
+
+ul.c-attr { clear:both; width:100%; margin:0; padding:0; }
+ul.c-attr li { border-bottom:1px solid #ccc;padding:0.625em 0.313em;overflow:hidden; background:#fff;}
+ul.c-attr li:first-child { border-top:1px solid #ccc;}
+
+.anno { padding:0.625em 0.313em; font-size:0.75em; line-height:150%; color:#666; }
+
+
+/* = 2011.08.18 가이드코드 3차 추가  ------------ */
+.gen-Group { margin:0 0 1.250em; border:1px solid #ddd; overflow:hidden; padding:0.625em; font-size:0.8em; background:#f5f5f5}
+.gen-Group h4 { margin:0;  padding:0.313em 8px; }
+.gen-number { margin:0; padding:0.313em 8px; }
+.gen-number dl { float:left;  width:50%; }
+.gen-number dd { padding:0 0.313em; font-size:0.8em;}
+.gen-number dt, .gen-quality dt, .gen-icon dt { padding:0.313em 8px; margin:0 0.313em 0.313em; font-size:0.8em; background:#f3f3f3; border-top:1px solid #d7d6cc; border-bottom:1px solid #d7d6cc;}
+
+.gen-nav { clear:both;  margin:0 0 60px; padding:0;  }
+.gen-nav .gen-tab {  margin:0; padding:0;  }
+.gen-tab ul { clear:both; padding:0.625em 0 0; width:100%; }
+.gen-tab li { float:left; text-align:center; padding:0.625em 0; overflow:hidden; background:#f5f5f5; border-right:1px solid #ddd; border-top:1px solid #ddd;  border-bottom:1px solid #ddd; }
+.gen-tab li a { dispaly:block; padding:10px 0; overflow:hidden; cursor:pointer; }
+.gen-tab li:first-child {  border-left:1px solid #ddd; }
+.gen-tab li.gen-tab-a { width:49.5%; }
+.gen-tab li.gen-tab-b { width:33%; }
+.gen-tab li.gen-tab-c { width:24.66%; }
+.gen-tab li.gen-tab-d { width:19.8%; }
+
+.gen-cont { clear:both; border:1px solid #ddd; overflow:hidden; padding:0.625em; font-size:0.75em; }
+.gen-quality dl { float:left; width:33%; margin:0; padding:0; }
+.gen-quality dd { padding:0 0.313em;}
+
+.gen-icon {  clear:both; padding:10px 0; magin:0; }
+.gen-icon dl { float:left; width:33%; margin-bottom:10px;}
+.gen-icon dd { padding:0 0.313em; }
+
+.gen-source { clear:both; border:2px solid #d7d6cc; background:#f5f5f5; overflow:hidden; padding:0.8em 0.5em 1.0em;}
+.gen-source h3 { font-size:0.8em; margin:0; padding:0.438em 0.313em 0.313em; }
+
+.sourseCode { margin:auto 0.313em; padding:0.313em; overflow:hidden; border:1px dashed #bfd3dc; background:#f7f9fa; text-align:center; width:95%;}
+
+
+.gen-sele { width:95% }
+.gen-sele1 { width:95% }
+.gen-btn { text-align:right; margin:1.250em 0; }
+.gen-btn a { text-decoration:none; }
+.gen-btn span { font-size:0.75em; font-weight:normal; border:1px solid #d8d8d8; letter-spacing:-1px; padding:0.438em 0.625em; background:#fcfcfc; color:#5b5b5b; }
+
+/* 하위단계별 */
+.c-grouping { clear:both; overflow: hidden; }
+.c-grouping .c-wid1 { width: 49%; text-align:center; border-right:1px solid #d8d8d8; }
+.c-grouping .c-wid2 { width: 50%; text-align:center; }
+.c-grouping .c-wid3 { width: 50%; text-align:left; }
+.c-grouping .c-wid4 { width: 50%; text-align:left; }
+.c-wid1, .c-wid2, .c-wid3, .c-wid4 {  margin: 0; padding: 0; border: 0; float: left;}
+
+ul.c-groList { clear:both; width:100%; margin:0; padding:0; }
+ul.c-groList li { border-bottom:1px solid #ccc;padding:0.625em 0.313em; overflow:hidden;  }
+ul.c-groList li:first-child { border-top:1px solid #ccc; height:18px; padding:0.313em; background:#f5f5f5;}
+
+.c-groupBtn { clear:both; text-align:right; padding:0.938em 0 0.313em }
+.c-groupBtn a { text-decoration:none; font-size:0.688em; }
+.c-groupBtn span { font-weight:normal; border:1px solid #d8d8d8; letter-spacing:-1px; padding:0.250em 0.313em; background:#fff; color:#5b5b5b; }
+.c-groupBtn span.btAdd { color:#4486c6 }
+.c-groupBtn span.btDel { color:#e43a36; }
+
+/* 가이드 화면별 크기 조정 */
+@media all and (min-width: 1200px){
+    .gen-primary {
+        text-align: left;
+        float: left;
+        width: 50%;
+        background: none;
+    }
+    .gen-secondary {
+        text-align: left;
+        float: left;
+        width: 50%;
+        background: none;
+    }   
+}
+
+
+@media all and (min-width: 750px){
+    .gen-primary {
+        text-align: left;
+        float: left;
+        width: 50%;
+        background: none;
+    }
+    .gen-secondary {
+        text-align: left;
+        float: left;
+        width: 50%;
+        background: none;
+    }   
+
+}
+
+/* source */
+.gen-tit { font-size:1.0em;}
+
+/* 2011.11.11 추가 */
+.egov-Dsclaimer { padding:0.5em 0 0.313em; margin:0 }
+.egov-Dsclaimer h2 { background:#fef3f2; border-top: solid 1px #dc9494; border-bottom: solid 1px #dc9494; padding:.438em 0 .438em .75em; font-size:0.750em; font-weight:bold; color:#d30c0c; overflow:hidden}
+.egov-Dsclaimer p { color:#6f6f6f; font-size:0.750em; padding:0.313em 0.875em 0; line-height:140%; font-family: Dotum; text-align:justify;  }
+.egov-Dsclaimer h3 {  background:#f4f480; padding:0.313em 0.875em 0; font-size:0.750em; font-weight:bold; color:#d30c0c; overflow:hidden}
+
+.btnDsc { padding:.438em 0 .438em .75em; }
+.btnDsc a { text-decoration:none; color:#bf3b07; width:100px; background:red}
+.btnViewSample { display:block; padding:4px 0; width:120px; text-align:center; color:#bf3b07; font-weight:bold; font-size:12px; border:1px solid #d76d4d; overflow:hidden;
+	background-image: linear-gradient(#fbf1e7, #edc0af);
+    background-image: -o-linear-gradient(#fbf1e7, #edc0af);
+    background-image: -moz-linear-gradient(top, #fbf1e7, #edc0af);
+    background-image: -webkit-gradient(linear,left top,left bottom, color-stop(0, #fbf1e7), color-stop(1, #edc0af));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fbf1e7', EndColorStr='#edc0af')"; }
+
+.egov-Example { margin:0.5em 0.875em; padding:0.5em; border: dashed 1px #f05120; background:#fef7f5; }
+.egov-Example p { background:none; border-top:0; border-bottom:0; padding:0; font-size: 1.0em; color:#000; font-weight:bold}
+.egov-Example .link { margin:0; padding:0.313em 0 0; width:100%; list-style:none; }
+.egov-Example .link li { color:#000; text-align:left; font-size:0.75em; font-family: Arial, sans-serif; line-height:150%; }
+.egov-Example .link li span.under { text-decoration:underline; }
+
+
+/*  col width - w3c validate width css 적용
+	2012.10.08 박지민 추가 
+*/
+
+.egov-colwidth10 {
+	width: 10%;
+}
+.egov-colwidth12 {
+	width: 12%;
+}
+.egov-colwidth15 {
+	width: 15%;
+}
+.egov-colwidth16 {
+	width: 16%;
+}
+.egov-colwidth19 {
+	width: 19%;
+}
+.egov-colwidth20 {
+	width: 20%;
+}
+.egov-colwidth24 {
+	width: 24%;
+}
+.egov-colwidth25 {
+	width: 25%;
+}
+.egov-colwidth30 {
+	width: 30%;
+}
+.egov-colwidth40 {
+	width: 40%;
+}
+.egov-colwidth55 {
+	width: 55%;
+}
+.egov-colwidth65 {
+	width: 65%;
+}
+.egov-colwidth68 {
+	width: 68%;
+}
+.egov-colwidth70 {
+	width: 70%;
+}

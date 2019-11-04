@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html lang="kr"> 
+    <head> 
+        <title>eGovFrame</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />    
+        
+        <!-- eGovFrame Common import -->        
+        <link rel="stylesheet" href="/css/egovframework/mbl/cmm/jquery.mobile-1.4.5.css" />
+        <link rel="stylesheet" href="/css/egovframework/mbl/cmm/EgovMobile-1.4.5.css" />
+        <script type="text/javascript" src="/js/egovframework/mbl/cmm/jquery-1.11.2.min.js"></script>
+		 
+        <script type="text/javascript" src="/js/egovframework/mbl/cmm/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="/js/egovframework/mbl/cmm/EgovMobile-1.4.5.js"></script>
+        
+        <!-- guide import -->
+        <link rel="stylesheet" href="/css/egovframework/mbl/rte/guide/guide.css">
+        <script type="text/javascript"  src="/js/egovframework/mbl/rte/guide/guide.js"></script>
+	</head>
+
+    <body> 
+
+        <!-- 모바일 페이지 start -->
+		<div data-role="page" class="type-index">
+		
+            <!-- header start -->
+            <div data-role="header" data-position="inline" data-theme="z"  class="egovBarHeader">
+                <a href="/guide/guide.html" data-icon="home" class="ui-btn-left" data-ajax="false">Home</a>
+                <a href="/guide/guide.html" data-icon="back" class="ui-btn-right" data-ajax="false">Back</a>
+                <h1><img src="/images/egovframework/mbl/rte/guide/h1_logo.png" alt="egovframework" /></h1>
+            </div>  
+            <!-- header end -->
+			
+			<!-- content start -->		
+			<div data-role="content" data-theme="d">
+			
+                <!-- content-primary start -->
+				<div class="content-primary">
+					<div class="egov-tit">
+						<h1>디렉터리 구성 정의</h1>
+						<p>웹 디자인 이미지 디렉터리의 명명 규칙 이외의 사항은 별도의 "관리환경 개발가이드"에 의하여 규정한다. 
+						웹 디자인 이미지 디렉터리 명명은 아래와 같다. (본 가이드라인은 하나의 예시로써 사용자의 개발환경에 따라 충분히 변경 가능함)</p>
+					</div>
+					
+					<div class="egov-deth1">
+						<h2>Web-root/images/표준코드/이미지파일명</h2>						
+						<div class="egov-deth2">
+							<ul class="link">
+					 			<li>예) <span class="under">/oe1/cms/com/</span>confirm.gif</li>
+					 			<li class="egov-txtIn10"><img src="/images/egovframework/mbl/rte/guide/code_fileName.png" alt="imagename" /></li>
+					 			<li class="egov-txtIn5"><img src="/images/egovframework/mbl/rte/guide/code_fileName2.png" alt="standardcode" />- [시스템 코드]_[서브시스템 코드]_[구분자]
+					 			</li>
+					 		</ul>
+						</div>
+					</div>
+					
+	             </div> 
+	            
+	       <div class="content-secondary"> 
+					
+
+                    <ul data-role="listview" data-inset="true" data-dividertheme="b">
+                    <li class="egov-bar-main1"><a href="/guide/intro/intro.html" style="color:#fff;" data-ajax="false">Overview</a></li>
+                        <li data-role="list-divider" class="egov-bar-main3">표준 화면 정의</li>
+                        <li><a href="/guide/template/outlinePrinciple.html" data-ajax="false">개요 및 원칙</a></li>
+                        <li><a href="/guide/template/directory.html" data-ajax="false">디렉터리 구성 정의</a></li>
+                        <li><a href="/guide/template/namingRule.html" data-ajax="false">파일 명명규칙 정의</a></li>
+                        <li><a href="/guide/template/designRule.html" data-ajax="false">디자인 원칙</a></li>
+
+                        <li data-role="list-divider" class="egov-bar-main3" >웹 인터페이스 디자인 가이드</li>
+                        <li><a href="/guide/template/interfaceDesign.html" data-ajax="false">디자인 가이드 정의</a></li>
+                        <li><a href="/guide/template/interfaceComponent.html" data-ajax="false">디자인 구성요소</a></li>
+                        <li><a href="/guide/template/interfaceHtml.html" data-ajax="false">HTML5와 CSS3.0 기본활용</a></li>
+
+                        <li data-role="list-divider" class="egov-bar-main3" >환경구성</li>
+                        <li><a href="/guide/intro/platform.html" data-ajax="false">지원 플랫폼</a></li>
+                        <li><a href="/guide/intro/specification.html" data-ajax="false">지원 사양</a></li> 
+
+                        <li data-role="list-divider" class="egov-bar-main3">사용자 화면 구성 지원 API </li>
+                        <li><a href="/guide/api/configure.html" data-ajax="false">Configuring Defaults</a></li>
+                        <li><a href="/guide/api/events.html" data-ajax="false">Events</a></li>
+                        <li><a href="/guide/api/methodsUtilities.html" data-ajax="false">Methods &amp; Utilities</a></li>
+                        <li><a href="/guide/api/mediahelpers.html" data-ajax="false">Responsive Layout</a></li>
+                        <li><a href="/guide/api/dynamicallyPage.html" data-ajax="false">Dynamic Page Generation</a></li>          
+                    </ul>
+				</div>
+			</div>	             
+            
+			<!-- footer start -->
+			<div data-role="footer" data-theme="z"  class="egovBar">
+				<h4>Copyright(c)2012 Ministry of Government Administration and Home Affairs.</h4>
+			</div>
+			<!-- footer end --> 
+      
+        </div> 
+        <!-- 모바일 페이지 end -->
+
+    </body>
+    
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+     <head>
+        <meta charset="utf-8"/>
+        <title>MobileUI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- MobileUI Common import -->        
+		<link rel="stylesheet" href="/css/egovframework/mbl/cmm/jquery.mobile-1.4.5.css" />
+		<link rel="stylesheet" href="/css/egovframework/mbl/cmm/EgovMobile-1.4.5.css" />
+		<script type="text/javascript" src="/js/egovframework/mbl/cmm/jquery-1.11.2.js"></script>
+		
+		<script type="text/javascript" src="/js/egovframework/mbl/cmm/jquery.mobile-1.4.5.js"></script>
+		<script type="text/javascript" src="/js/egovframework/mbl/cmm/EgovMobile-1.4.5.js"></script>
+   
+        <!-- guide import -->
+		<link rel="stylesheet" href="/css/egovframework/mbl/rte/guide/guide.css">
+		<script type="text/javascript"  src="/js/egovframework/mbl/rte/guide/guide.js"></script>
+         
+        <!-- datebox javascript-->
+		<link rel="stylesheet" href="/css/egovframework/mbl/com/datepicker/jqm-datebox.css"/>
+
+		<script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jqm-datebox.core.js"></script>
+        <script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jqm-datebox.mode.calbox.js"></script> 
+		<script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jqm-datebox.mode.datebox.js"></script>
+		<script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jqm-datebox.mode.flipbox.js"></script>
+		<script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jquery.mobile.datebox.i18n.ko.utf8.js"></script> 
+    </head>
+    <body>
+    <div data-role="page" class="type-home" data-title="PS영업정보">
+	<div data-role="header" data-position="inline" data-theme="z" class="egovBarHeader">
+	   <h4> PS영업실적정보</h4>
+	</div>
+    <div data-role="content" data-theme="d">
+       <!-- content-primary start -->
+            <div class="egov-deth1">
+                <div class="egov-deth4" >
+                    <h1><img src="/images/lsnetworks/logo.gif" alt="lsnetworks" /></h1>
+                    <h1><img src="/images/lsnetworks/pos_main.png" text-align="center" width="100%" height="100%" alt="lsnetworks" /></h1>
+                </div>    
+                <div class="egov-deth2">
+                    <form id="form-1" action="/lsnmb/menu/main_menu.html" method="get">
+                        <input type="date"  data-role="datebox" id="text1" data-options='{"mode": "datebox"}' />
+                        <input type="date"  data-role="datebox" id="text1" data-options='{"mode": "calbox"}' />
+                        <input type="date"  data-role="datebox" id="text2" data-options='{"mode": "timebox"}' />
+                        <input type="date"  data-role="datebox" id="text3" data-options='{"mode": "timebox", "timeFormat": 12}' />
+                        <input type="date"  data-role="datebox" id="text4" data-options='{"mode": "calbox", "button": "e"}' />
+                        <input type="password" id="password1" placeholder="비밀번호를 입력하세요"/>
+                        <button data-theme="b" id="submit1" type="submit">Sing In</button>
+                    </form>
+                </div>    
+            </div>    
+    </div>    
+    <div data-role="footer" data-theme="z"  class="egovBar">
+		<h4>copyright &copy; LS네트웍스 Co. all rights reserved.</h4>
+	</div>    
+    </div>   
+    </body>
+</html>
