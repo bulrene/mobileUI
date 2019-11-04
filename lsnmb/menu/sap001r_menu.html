@@ -26,34 +26,6 @@
 		<script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jquery.mobile.datebox.i18n.ko.utf8.js"></script> 
     </head>
     <body>
-    <div id="sap001_main" data-role="page" class="type-home" data-title="PS영업정보">
-        
-        <div data-role="header" data-position="fixed" data-theme="d" class="egovBarHeader">
-             <a href="/lsnmb/menu/main_menu.html" data-icon="home" class="ui-btn-left" data-theme="d" data-ajax="false">Home</a>
-             <h1><img src="/images/lsnetworks/logo1.png" alt="lsnetworks" /></h1>
-        </div>
-
-        <div data-role="content" data-theme="d">
-           <!-- content-serach start -->
-                <div class="egov-deth1">
-                    <form id="form-1" action="/lsnmb/menu/main_menu.html" method="get">
-                        <label for="text1">판매일자 :</label>
-                        <input type="date"  data-role="datebox" id="text2" data-options='{"mode": "datebox"}' />
-                            <label for="select-choice-8" class="select">입금가/판매가:</label> 
-                            <select id="select-choice-8"> 
-                                <option value="choice1">입금가</option> 
-                                <option value="choice2">판매가</option> 
-                            </select> 
-                        <button data-theme="b" id="submit1" type="submit">검색</button>
-                    </form>
-                </div>    
-        </div>
-
-        <div data-role="footer" data-theme="z"  class="egovBar">
-            <h4>copyright &copy; LS네트웍스 Co. all rights reserved.</h4>
-        </div>
-        
-    </div>
     
     <div id="sap001_view" data-role="page" class="type-home" data-title="PS영업정보">
         
@@ -61,20 +33,48 @@
              <a href="/lsnmb/menu/main_menu.html" data-icon="home" class="ui-btn-left" data-theme="d" data-ajax="false">Home</a>
              <h1><img src="/images/lsnetworks/logo1.png" alt="lsnetworks" /></h1>
         </div>
-
+        <div class="ui-body-e">
+            <h4>&nbsp;&nbsp;상품별판매현황</h4>
+        </div>
         <div data-role="content" data-theme="d">
            <!-- content-serach start -->
                 <div class="egov-deth1">
-                    <form id="form-1" action="/lsnmb/menu/main_menu.html" method="get">
-                        <label for="text1">판매일자 :</label>
-                        <input type="date"  data-role="datebox" id="text2" data-options='{"mode": "datebox"}' />
-                            <label for="select-choice-8" class="select">입금가/판매가:</label> 
-                            <select id="select-choice-8"> 
-                                <option value="choice1">입금가</option> 
-                                <option value="choice2">판매가</option> 
-                            </select> 
-                        <button data-theme="b" id="submit1" type="submit">검색</button>
-                    </form>
+                    <table  data-role="table" class="ui-responsive">
+                          <thead>
+                             <tr>
+                                <th>상품</th>
+                                <th>등급</th>
+                                <th>당일판매가</th>
+                                <th>누적판매</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                            <tr>
+                                <td>신발</td>
+                                <td>정상</td>
+                                <td>39,900</td>
+                                <td>22,859</td>
+                            </tr> 
+                            <tr>
+                                <td></td>
+                                <td>상설</td>
+                                <td>22,859</td>
+                                <td>210,446</td>
+                            </tr> 
+                            <tr>
+                                <td></td>
+                                <td>기타</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>합계</td>
+                                <td></td>
+                                <td>62,759</td>
+                                <td>829,925</td>
+                            </tr>  
+                        </tbody>
+                    </table>    
                 </div>    
         </div>
 

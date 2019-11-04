@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+     <head>
+        <meta charset="utf-8"/>
+        <title>MobileUI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- MobileUI Common import -->        
+		<link rel="stylesheet" href="/css/egovframework/mbl/cmm/jquery.mobile-1.4.5.css" />
+		<link rel="stylesheet" href="/css/egovframework/mbl/cmm/EgovMobile-1.4.5.css" />
+		<script type="text/javascript" src="/js/egovframework/mbl/cmm/jquery-1.11.2.js"></script>
+		
+		<script type="text/javascript" src="/js/egovframework/mbl/cmm/jquery.mobile-1.4.5.js"></script>
+		<script type="text/javascript" src="/js/egovframework/mbl/cmm/EgovMobile-1.4.5.js"></script>
+   
+        <!-- guide import -->
+		<link rel="stylesheet" href="/css/egovframework/mbl/rte/guide/guide.css">
+		<script type="text/javascript"  src="/js/egovframework/mbl/rte/guide/guide.js"></script>
+         
+        <!-- datebox javascript-->
+		<link rel="stylesheet" href="/css/egovframework/mbl/com/datepicker/jqm-datebox.css"/>
+
+		<script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jqm-datebox.core.js"></script>
+        <script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jqm-datebox.mode.calbox.js"></script> 
+		<script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jqm-datebox.mode.datebox.js"></script>
+		<script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jqm-datebox.mode.flipbox.js"></script>
+		<script type="text/javascript" src="/js/egovframework/mbl/com/datepicker/jquery.mobile.datebox.i18n.ko.utf8.js"></script> 
+    </head>
+    <body>
+    <div id="sap001_main" data-role="page" class="type-home" data-title="PS영업정보">
+        
+        <div data-role="header" data-position="fixed" data-theme="d" class="egovBarHeader">
+             <a href="/lsnmb/menu/main_menu.html" data-icon="home" class="ui-btn-left" data-theme="d" data-ajax="false">Home</a>
+             <h1><img src="/images/lsnetworks/logo1.png" alt="lsnetworks" /></h1>
+        </div>
+        
+        <div class="ui-body-e">
+            <h4>&nbsp;&nbsp;상품별판매현황</h4>
+        </div>
+        <div data-role="content" data-theme="d">
+           <!-- content-serach start -->
+                <div class="egov-deth1">
+                    <form id="form-1" action="#sap001_view" method="get">
+                        <label for="text1">판매일자 :</label>
+                        <input type="date"  data-role="datebox" id="text2" data-options='{"mode": "datebox"}' />
+                            <label for="select-choice-8" class="select">입금가/판매가:</label> 
+                            <select id="select-choice-8"> 
+                                <option value="choice1">입금가</option> 
+                                <option value="choice2">판매가</option> 
+                            </select> 
+                        <button data-theme="b" id="submit1" type="submit">검색</button>
+                    </form>
+                </div>    
+        </div>
+
+        <div data-role="footer" data-theme="z"  class="egovBar">
+            <h4>copyright &copy; LS네트웍스 Co. all rights reserved.</h4>
+        </div>
+        
+    </div>
+    
+    <div id="sap001_view" data-role="page" class="type-home" data-title="PS영업정보">
+        
+        <div data-role="header" data-position="fixed" data-theme="d" class="egovBarHeader">
+             <a href="/lsnmb/menu/main_menu.html" data-icon="home" class="ui-btn-left" data-theme="d" data-ajax="false">Home</a>
+             <h1><img src="/images/lsnetworks/logo1.png" alt="lsnetworks" /></h1>
+        </div>
+
+        <div data-role="content" data-theme="d">
+           <!-- content-serach start -->
+                <div class="egov-deth1">
+                    <form id="form-1" action="/lsnmb/menu/main_menu.html" method="get">
+                        <label for="text1">판매일자 :</label>
+                        <input type="date"  data-role="datebox" id="text2" data-options='{"mode": "datebox"}' />
+                            <label for="select-choice-8" class="select">입금가/판매가:</label> 
+                            <select id="select-choice-8"> 
+                                <option value="choice1">입금가</option> 
+                                <option value="choice2">판매가</option> 
+                            </select> 
+                        <button data-theme="b" id="submit1" type="submit">검색</button>
+                    </form>
+                </div>    
+        </div>
+
+        <div data-role="footer" data-theme="z"  class="egovBar">
+            <h4>copyright &copy; LS네트웍스 Co. all rights reserved.</h4>
+        </div>
+        
+    </div>   
+    </body>
+</html>
